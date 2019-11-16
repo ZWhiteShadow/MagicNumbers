@@ -15,12 +15,11 @@
         
 <script>
 
-var max = 0;
-for (var x = 1; x <= 100000; x++) {
+var average = 0;
+for (var x = 1; x <= 10000; x++) {
 
 // https://www.w3schools.com/js/js_arrays.asp
 var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
-var maxall = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
 
 for (var a = 1; a <= 100; a++) {
 
@@ -42,19 +41,15 @@ var test = 0;
 for (var i = 0; i < all.length; i++) {
        if (all[i] >= 10) {test += 1}
 			 }
-if (test == RandomNumber.length) {
-if (max < a)     {
-   max = a;
-   maxall = all;
-                 };
-     break;
-          } // End test loop
+			 
+if (test == RandomNumber.length) { average += a;
+     break; }
 
     } // End Random # Generator loop
 
 } // Max Test Loop
 
-document.getElementById("Display2").innerHTML = "Max Number Binary Numbers to get 10 for each digit is: " + max;
+document.getElementById("Display2").innerHTML = "Average Number Binary Numbers to get 10 for each digit is: " + average / x;
 
 document.getElementById("Display3").innerHTML = all.toString()
 
@@ -62,4 +57,3 @@ document.getElementById("Display3").innerHTML = all.toString()
     
     </body> 
 </html> 
-
