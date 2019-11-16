@@ -11,47 +11,59 @@
 
 <p id="Display"></p>
 <p id="Display2"></p>
-<p id="Display3"></p>
+<p id="1"></p>
+<p id="2"></p>
+<p id="4"></p>
+<p id="8"></p>
+<p id="16"></p>
+<p id="32"></p>
+<p id="64"></p>
+<p id="128"></p>
+<p id="256"></p>
         
 <script>
 
-var average = 0;
-for (var x = 1; x <= 10000; x++) {
-
 // https://www.w3schools.com/js/js_arrays.asp
 var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+var n1 = [], n2 = [], n4 = [], n8 = [],
+   n16 = [], n32 =[], n64 =[], n128 =[];
 
-for (var a = 1; a <= 100; a++) {
+//for (var a = 1; a <= 50; a++) {
 
 // http://www.javascriptkit.com/javatutors/randomnum.shtml
 // https://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript
-var RandomNumber= (Math.floor(Math.random()*255) + 256).toString(2); // Create a random 9 digit binary number
-document.getElementById("Display").innerHTML = RandomNumber
+var Random = Math.floor(Math.random()*255) + 256; // Random number 
+var RandomNumber = (Random).toString(2) // Converts to binary
 
 // https://stackoverflow.com/questions/9951500/javascriptstoring-values-in-array
 
 for (var i = 0; i < RandomNumber.length; i++) {
-        all[i] += +RandomNumber.charAt(i) }
-        
-//https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop         
-document.getElementById("Display2").innerHTML = all.toString()
+        all[i] = RandomNumber.charAt(i)
+				if (i == 8 && all[8] == 1) {n1[n1.length] = 1};
+					if (i == 7 && all[7] == 1) {n2[n2.length] = 2};
+						if (i == 6 && all[6] == 1) {n4[n4.length] = 4};
+							if (i == 5 && all[5] == 1) {n8[n8.length] = 8};
+								if (i == 4 && all[4] == 1) {n16[n16.length] = 16};
+									if (i == 3 && all[3] == 1) {n32[n32.length] = 32};
+										if (i == 2 && all[2] == 1) {n64[n64.length] = 64};
+											if (i == 1 && all[1] == 1) {n128[n128.length] = 128};
+				}
 
-// Test if all numbers are greater than 10
-var test = 0;
-for (var i = 0; i < all.length; i++) {
-       if (all[i] >= 10) {test += 1}
-			 }
-			 
-if (test == RandomNumber.length) { average += a;
-     break; }
+//    } // End Random # Generator loop
+	
+//https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop       
 
-    } // End Random # Generator loop
-
-} // Max Test Loop
-
-document.getElementById("Display2").innerHTML = "Average Number Binary Numbers to get 10 for each digit is: " + average / x;
-
-document.getElementById("Display3").innerHTML = all.toString()
+document.getElementById("Display").innerHTML = Random
+document.getElementById("Display2").innerHTML = RandomNumber
+if (n1 == 1) {document.getElementById("1").innerHTML = "Has " + n1.toString() + " place " }
+if (n2 == 2) {document.getElementById("2").innerHTML = "Has " + n2.toString() + " place " }
+if (n4 == 4) {document.getElementById("4").innerHTML = "Has " + n4.toString() + " place " }
+if (n8 == 8) {document.getElementById("8").innerHTML = "Has " + n8.toString() + " place " }
+if (n16 == 16) {document.getElementById("16").innerHTML = "Has " + n16.toString() + " place " }
+if (n32 == 32) {document.getElementById("32").innerHTML = "Has " + n32.toString() + " place " }
+if (n64 == 64) {document.getElementById("64").innerHTML = "Has " + n64.toString() + " place " }
+if (n128 == 128) {document.getElementById("128").innerHTML = "Has " + n128.toString() + " place " }
+document.getElementById("256").innerHTML = "Has 256 place " 
 
 </script>
     
