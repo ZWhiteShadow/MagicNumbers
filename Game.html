@@ -15,13 +15,13 @@
         
 <script>
 
-var all = [0, 0, 0, 0, 0, 0, 0]; // https://www.w3schools.com/js/js_arrays.asp
+var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // https://www.w3schools.com/js/js_arrays.asp
 
-for (var a = 1; a < 10; a++) {
+for (var a = 1; a <= 100; a++) {
 
 // http://www.javascriptkit.com/javatutors/randomnum.shtml
 // https://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript
-var RandomNumber= (Math.floor(Math.random()*63) + 64).toString(2); // Create a random 7 digit binary number
+var RandomNumber= (Math.floor(Math.random()*255) + 256).toString(2); // Create a random 9 digit binary number
 document.getElementById("Display").innerHTML = RandomNumber
 
 // https://stackoverflow.com/questions/9951500/javascriptstoring-values-in-array
@@ -32,10 +32,20 @@ for (var i = 0; i < RandomNumber.length; i++) {
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop         
 document.getElementById("Display2").innerHTML = all.toString()
 
+document.getElementById("Display3").innerHTML = test;
+
+// Test if all numbers are greater than 10
+var test = 0;
+for (var i = 0; i < all.length; i++) {
+       if (all[i] >= 10) {test += 1}
+			 }
+if (test == RandomNumber.length) {break;}
+
 }
+
+
 
 </script>
     
     </body> 
 </html> 
-
