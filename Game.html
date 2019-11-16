@@ -15,7 +15,12 @@
         
 <script>
 
-var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; // https://www.w3schools.com/js/js_arrays.asp
+var max = 0;
+for (var x = 1; x <= 100000; x++) {
+
+// https://www.w3schools.com/js/js_arrays.asp
+var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
+var maxall = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
 
 for (var a = 1; a <= 100; a++) {
 
@@ -32,20 +37,29 @@ for (var i = 0; i < RandomNumber.length; i++) {
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop         
 document.getElementById("Display2").innerHTML = all.toString()
 
-document.getElementById("Display3").innerHTML = "Number of Binary Number to get 10 for each digit: " + a;
-
 // Test if all numbers are greater than 10
 var test = 0;
 for (var i = 0; i < all.length; i++) {
        if (all[i] >= 10) {test += 1}
 			 }
-if (test == RandomNumber.length) {break;}
+if (test == RandomNumber.length) {
+if (max < a)     {
+   max = a;
+   maxall = all;
+                 };
+     break;
+          } // End test loop
 
-}
+    } // End Random # Generator loop
 
+} // Max Test Loop
 
+document.getElementById("Display2").innerHTML = "Max Number Binary Numbers to get 10 for each digit is: " + max;
+
+document.getElementById("Display3").innerHTML = all.toString()
 
 </script>
     
     </body> 
 </html> 
+
