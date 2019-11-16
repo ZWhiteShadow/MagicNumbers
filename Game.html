@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+  
+<html> 
+    <head> 
+        <title> 
+              Magic Numbers
+        </title>
+   </head>
+<body>
+
+
+<p id="Display"></p>
+<p id="Display2"></p>
+        
+<script>
+
+
+// http://www.javascriptkit.com/javatutors/randomnum.shtml
+// https://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript
+
+var RandomNumber= (Math.floor(Math.random()*63) + 64).toString(2); // Create a random 7 digit binary number
+document.getElementById("Display").innerHTML = RandomNumber
+
+// https://stackoverflow.com/questions/9951500/javascriptstoring-values-in-array
+
+var all = new Array();
+for (var i = 0; i < RandomNumber.length; i++) {
+        all[i]=RandomNumber.charAt(i)
+        }
+//https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop 
+
+document.getElementById("Display2").innerHTML = all.toString()
+
+
+</script>
+    
+    </body> 
+</html> 
