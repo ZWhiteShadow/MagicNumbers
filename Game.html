@@ -33,6 +33,7 @@ user-scalable=no">
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
 <button id="Button1" onclick="Start()">I have chosen my number! I am ready!</button>
 <script>
+<p id="MyGuess></p>
 
 // https://www.w3schools.com/js/js_arrays.asp 
 var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
@@ -64,6 +65,7 @@ for (var i = 0; i < RandomNumber.length; i++) {
 
 var MakeNewButton = true;
 var NextScreen = 1;
+var MyGuess = 256;
 DisplayNumbers(nAll);
 
 function Start(){
@@ -73,7 +75,15 @@ document.getElementById('Button1').innerHTML = "YES I see my number";
 
 if (NextScreen == 1) {DisplayNumbers(n1); }
 if (NextScreen == 2) {DisplayNumbers(n2); }
+if (NextScreen == 4) {DisplayNumbers(n4); }
+if (NextScreen == 8) {DisplayNumbers(n8); }
+if (NextScreen == 16) {DisplayNumbers(n16; }
+if (NextScreen == 32)  {DisplayNumbers(n32); }
+if (NextScreen == 64)  {DisplayNumbers(n64); }
+if (NextScreen == 128) {DisplayNumbers(n128); }
 
+MyGuess += NextScreen;
+document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess;
 NextScreen *= 2;
 
 if (MakeNewButton == true){
