@@ -26,7 +26,9 @@ user-scalable=no">
 
 
 <h2>MAGIC NUMBERS</h2>
-<h3><p id= "Display"></p></h3>
+<h3><p id= "Display">Choose any of these numbers:</p></h3>
+<h3><p id= "Display">And I will guess it!</p></h3>
+
 <p id="Display1"></p>
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
 <button onclick="DisplayNumbers(nAll)">Ready to Play!</button>
@@ -59,6 +61,8 @@ for (var i = 0; i < RandomNumber.length; i++) {
 				}
         nAll[nAll.length] = Random;
    } // End Random # Generator loop
+
+DisplayNumbers();
 
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop  
 
