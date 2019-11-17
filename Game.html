@@ -31,7 +31,7 @@ user-scalable=no">
 
 <p id="Display1"></p>
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
-<button onclick="DisplayNumbers(n1)">Ready to Play!</button>
+<button onclick="Start()">Ready to Play!</button>
 <script>
 
 // https://www.w3schools.com/js/js_arrays.asp
@@ -64,13 +64,17 @@ for (var i = 0; i < RandomNumber.length; i++) {
 
 DisplayNumbers(nAll);
 
+function Start(){
+document.getElementById("Display2").innerHTML = "";
+document.getElementById("Display3").innerHTML = "Is your number on the screen?";
+DisplayNumbers(n1);
+}
+
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop  
 
 function DisplayNumbers(x){
 
 document.getElementById("Display1").innerHTML = "";
-document.getElementById("Display2").innerHTML = "";
-document.getElementById("Display3").innerHTML = "Is your number on the screen?";
 
 for (var i = 1; i < (x.length); i++ ) {
      document.getElementById("Display1").innerHTML +=  x[i] + "\xa0\xa0\xa0\xa0\xa0\xa0  ";
