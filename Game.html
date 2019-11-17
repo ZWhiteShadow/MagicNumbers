@@ -7,7 +7,6 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    </head>
 
- <body>
 	 <style>
 	#wrapper {
   display: flex;
@@ -31,10 +30,11 @@ user-scalable=no">
 <h3><p id= "Display2">Choose any of these numbers:</p></h3>
 <h3><p id= "Display3">And I will guess it!</p></h3>
 
-<p id="Display1"></p>
+	<p id="Display1"></p>
+	<p id="MyGuess"></p>
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
 <button id="Button1" onclick="Start()">I have chosen my number! I am ready!</button>
-<p id="MyGuess"></p>
+
 
 <script>
 
@@ -80,7 +80,7 @@ if (NextScreen == 1) {DisplayNumbers(n1); }
 if (NextScreen == 2) {DisplayNumbers(n2); }
 if (NextScreen == 4) {DisplayNumbers(n4); }
 if (NextScreen == 8) {DisplayNumbers(n8); }
-if (NextScreen == 16) {DisplayNumbers(n16; }
+if (NextScreen == 16) {DisplayNumbers(n16); }
 if (NextScreen == 32)  {DisplayNumbers(n32); }
 if (NextScreen == 64)  {DisplayNumbers(n64); }
 if (NextScreen == 128) {DisplayNumbers(n128); }
