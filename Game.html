@@ -26,8 +26,8 @@ user-scalable=no">
 
 
 <h2>MAGIC NUMBERS</h2>
-<h3><p id= "Display">Choose any of these numbers:</p></h3>
-<h3><p id= "Display">And I will guess it!</p></h3>
+<h3><p id= "Display2">Choose any of these numbers:</p></h3>
+<h3><p id= "Display3">And I will guess it!</p></h3>
 
 <p id="Display1"></p>
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
@@ -69,6 +69,8 @@ DisplayNumbers(nAll);
 function DisplayNumbers(x){
 
 document.getElementById("Display1").innerHTML = "";
+document.getElementById("Display2").innerHTML = "";
+document.getElementById("Display3").innerHTML = "Is your number on the screen?";
 
 for (var i = 1; i < (x.length); i++ ) {
      document.getElementById("Display1").innerHTML +=  x[i] + "\xa0\xa0\xa0\xa0\xa0\xa0  ";
