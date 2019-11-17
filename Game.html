@@ -62,6 +62,7 @@ for (var i = 0; i < RandomNumber.length; i++) {
         nAll[nAll.length] = Random;
    } // End Random # Generator loop
 
+var MakeNewButton = true;
 DisplayNumbers(nAll);
 
 function Start(){
@@ -70,6 +71,18 @@ document.getElementById("Display3").innerHTML = "Is your number on the screen?";
 document.getElementById('Button1').innerHTML = "Yes";
 
 DisplayNumbers(n1);
+
+if (MakeNewButton == true){
+
+// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_pushbutton_create
+
+var x = document.createElement("BUTTON");
+  var t = document.createTextNode("No");
+  x.appendChild(t);
+  document.body.appendChild(x);
+  MakeNewButton = false;
+  }
+
 }
 
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop  
