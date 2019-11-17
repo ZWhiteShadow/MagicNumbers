@@ -34,7 +34,7 @@ user-scalable=no">
 <button id="Button1" onclick="Start()">I have chosen my number! I am ready!</button>
 <script>
 
-// https://www.w3schools.com/js/js_arrays.asp
+// https://www.w3schools.com/js/js_arrays.asp 
 var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
 var n1 = [], n2 = [], n4 = [], n8 = [],
    n16 = [], n32 =[], n64 =[], n128 =[], nAll = [], AllAry = [];
@@ -63,6 +63,7 @@ for (var i = 0; i < RandomNumber.length; i++) {
    } // End Random # Generator loop
 
 var MakeNewButton = true;
+var NextScreen = 1;
 DisplayNumbers(nAll);
 
 function Start(){
@@ -70,7 +71,10 @@ document.getElementById("Display2").innerHTML = "";
 document.getElementById("Display3").innerHTML = "Is your number on the screen?";
 document.getElementById('Button1').innerHTML = "YES I see my number";
 
-DisplayNumbers(n1);
+if (NextScreen == 1) {DisplayNumbers(n1); }
+if (NextScreen == 2) {DisplayNumbers(n2); }
+
+NextScreen *= 2;
 
 if (MakeNewButton == true){
 
