@@ -31,7 +31,7 @@ user-scalable=no">
 
 <p id="Display1"></p>
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
-<button onclick="Start()">Ready to Play!</button>
+<button id="Button1" onclick="Start()">Ready to Play!</button>
 <script>
 
 // https://www.w3schools.com/js/js_arrays.asp
@@ -67,6 +67,8 @@ DisplayNumbers(nAll);
 function Start(){
 document.getElementById("Display2").innerHTML = "";
 document.getElementById("Display3").innerHTML = "Is your number on the screen?";
+document.getElementById('Button1').innerHTML = "Yes";
+
 DisplayNumbers(n1);
 }
 
