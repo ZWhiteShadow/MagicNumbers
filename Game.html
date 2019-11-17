@@ -31,7 +31,7 @@ user-scalable=no">
 
 <p id="Display1"></p>
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
-<button onclick="DisplayNumbers(nAll)">Ready to Play!</button>
+<button onclick="DisplayNumbers(n1)">Ready to Play!</button>
 <script>
 
 // https://www.w3schools.com/js/js_arrays.asp
@@ -62,11 +62,14 @@ for (var i = 0; i < RandomNumber.length; i++) {
         nAll[nAll.length] = Random;
    } // End Random # Generator loop
 
-DisplayNumbers();
+DisplayNumbers(nAll);
 
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop  
 
 function DisplayNumbers(x){
+
+document.getElementById("Display1").innerHTML = "";
+
 for (var i = 1; i < (x.length); i++ ) {
      document.getElementById("Display1").innerHTML +=  x[i] + "\xa0\xa0\xa0\xa0\xa0\xa0  ";
      if (i % 6 == 0) {document.getElementById("Display1").innerHTML += "<br><br>  ";}
