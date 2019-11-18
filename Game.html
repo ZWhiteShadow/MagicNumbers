@@ -70,10 +70,12 @@ var MakeNewButton = true;
 var NextScreen = 1;
 var MyGuess = 256;
 DisplayNumbers(nAll);
+var Counter = 0;
 
 function Start(){
+Counter += 1;
 document.getElementById("Display2").innerHTML = "";
-document.getElementById("Display3").innerHTML = "Is your number on the screen?";
+document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
 document.getElementById('Button1').innerHTML = "YES I see my number";
 
 if (NextScreen == 1) {DisplayNumbers(n1); }
@@ -85,9 +87,10 @@ if (NextScreen == 32)  {DisplayNumbers(n32); }
 if (NextScreen == 64)  {DisplayNumbers(n64); }
 if (NextScreen == 128) {DisplayNumbers(n128); }
 
+if (NextScreen < 256){
 MyGuess += NextScreen;
-document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess;
-if (NextScreen < 256) {NextScreen *= 2;};
+document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
+NextScreen *= 2;}
 
 if (MakeNewButton == true){
 
