@@ -74,7 +74,6 @@ var Counter = 0;
 
 function Start(){
 Counter += 1;
-if (Counter == 9){End(); }
 document.getElementById("Display2").innerHTML = "";
 document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
 document.getElementById('Button1').innerHTML = "YES I see my number";
@@ -105,6 +104,8 @@ var x = document.createElement("BUTTON");
   document.body.appendChild(x);
   MakeNewButton = false;
   }
+
+if (Counter == 9){End(); }
 
 }
 
