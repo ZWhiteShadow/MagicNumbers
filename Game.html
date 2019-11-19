@@ -87,7 +87,7 @@ if (NextScreen == 32)  {DisplayNumbers(n32); }
 if (NextScreen == 64)  {DisplayNumbers(n64); }
 if (NextScreen == 128) {DisplayNumbers(n128); }
 
-if (NextScreen < 256){
+if (NextScreen < 256 && MakeNewButton == false) {
 MyGuess += NextScreen;
 document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
 NextScreen *= 2;}
