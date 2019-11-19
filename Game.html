@@ -97,13 +97,18 @@ if (MakeNewButton == true){
 
 // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_pushbutton_create
 
-var x = document.createElement("Button2");
+var x = document.createElement("BUTTON");
   var t = document.createTextNode("NO it is NOT there");
   x.appendChild(t);
+  x.id ='Button2';
+  x.onclick = No();
   document.body.appendChild(x);
   MakeNewButton = false;
   }
 
+}
+
+function No(){
 }
 
 function End(){
