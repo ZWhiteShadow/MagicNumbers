@@ -74,6 +74,7 @@ var Counter = 0;
 
 function Start(){
 Counter += 1;
+if (Counter == 9){End(); }
 document.getElementById("Display2").innerHTML = "";
 document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
 document.getElementById('Button1').innerHTML = "YES I see my number";
@@ -96,12 +97,24 @@ if (MakeNewButton == true){
 
 // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_pushbutton_create
 
-var x = document.createElement("BUTTON");
+var x = document.createElement("Button2");
   var t = document.createTextNode("NO it is NOT there");
   x.appendChild(t);
   document.body.appendChild(x);
   MakeNewButton = false;
   }
+
+}
+
+function End(){
+
+document.getElementById("Display1").innerHTML = "";
+document.getElementById("Display2").innerHTML = "Your Number Is: " + MyGuess;
+document.getElementById("Display3").innerHTML = "";
+document.getElementById("MyGuess").innerHTML = "";
+
+document.getElementById('Button1').style.visibility = 'hidden';
+document.getElementById('Button2').style.visibility = 'hidden';
 
 }
 
