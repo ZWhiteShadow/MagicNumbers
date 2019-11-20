@@ -5,7 +5,6 @@
     <head> 
         <title> Magic Numbers</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   </head>
 
 	 <style>
 	#wrapper {
@@ -23,8 +22,9 @@ content="width=device-width,
  minimum-scale=1.0, 
 maximum-scale=1.0, 
 user-scalable=no">
+  </head>
 
-
+<body>
 
 <h2>MAGIC NUMBERS</h2>
 <h3><p id= "Display2">Choose any of these numbers:</p></h3>
@@ -47,7 +47,10 @@ for (var a = 1; a <= 54; a++) {
 
 // http://www.javascriptkit.com/javatutors/randomnum.shtml
 // https://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript
-var Random = Math.floor(Math.random()*255) + 256; // Random number 
+var Random = Math.floor(Math.random()*256) + 256; // Random number 
+
+if (Random == 256){Random = 257};
+
 var RandomNumber = (Random).toString(2) // Converts to binary
 
 // https://stackoverflow.com/questions/9951500/javascriptstoring-values-in-array
@@ -67,8 +70,8 @@ for (var i = 0; i < RandomNumber.length; i++) {
    } // End Random # Generator loop
 
 var MakeNewButton = true;
-var NextScreen = 1;
-var MyGuess = 256;
+var NextScreen = .5;
+var MyGuess = 255.5;
 DisplayNumbers(nAll);
 var Counter = 0;
 
@@ -87,10 +90,9 @@ if (NextScreen == 32)  {DisplayNumbers(n32); }
 if (NextScreen == 64)  {DisplayNumbers(n64); }
 if (NextScreen == 128) {DisplayNumbers(n128); }
 
-if (NextScreen < 256 && MakeNewButton == false) {
 MyGuess += NextScreen;
 document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
-NextScreen *= 2;}
+NextScreen *= 2;
 
 if (MakeNewButton == true){
 
@@ -100,8 +102,10 @@ var x = document.createElement("BUTTON");
   var t = document.createTextNode("NO it is NOT there");
   x.appendChild(t);
   x.id ='Button2';
-  x.onclick = No();
-  document.body.appendChild(x);
+  document.body.appendChild(x); 
+//https://stackoverflow.com/questions/42824309/how-to-change-onclick-using-javascript/42824347
+document.getElementById('Button2').setAttribute( "onClick", "No()");
+  
   MakeNewButton = false;
   }
 
@@ -109,6 +113,8 @@ if (Counter == 9){End(); }
 }
 
 function No(){
+MyGuess -= NextScreen;
+Start();
 }
 
 function End(){
