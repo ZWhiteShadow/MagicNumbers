@@ -29,9 +29,7 @@ user-scalable=no">
 <h2>MAGIC NUMBERS</h2>
 <h3><p id= "Display2">Choose any of these numbers:</p></h3>
 <h3><p id= "Display3">And I will guess it!</p></h3>
-
 	<p id="Display1"></p>
-	<p id="MyGuess"></p>
 <!-- https://www.w3schools.com/jsref/event_onclick.asp -->
 <button id="Button1" onclick="Start()">I have chosen my number! I am ready!</button>
 
@@ -102,10 +100,8 @@ NextNumber();
 
 function NextNumber(){
 Counter += 1;
-if (Counter == 9){End(); }
-
 document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
-document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
+if (Counter == 9){End(); }
 if (NextScreen == .5) {DisplayNumbers(n1); }
 if (NextScreen == 1) {DisplayNumbers(n2); }
 if (NextScreen == 2) {DisplayNumbers(n4); }
@@ -122,11 +118,8 @@ function End(){
 document.getElementById("Display1").innerHTML = "";
 document.getElementById("Display2").innerHTML = "<h1>" + "Your Number Is: " + MyGuess + "</h1>" ;
 document.getElementById("Display3").innerHTML = "";
-document.getElementById("MyGuess").innerHTML = "";
-
 document.getElementById('Button1').style.visibility = 'hidden';
 document.getElementById('Button2').style.visibility = 'hidden';
-
 }
 
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop  
