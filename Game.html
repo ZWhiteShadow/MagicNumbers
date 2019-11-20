@@ -72,12 +72,12 @@ for (var i = 0; i < RandomNumber.length; i++) {
 
 DisplayNumbers(nAll);
 document.getElementById('Button1').innerHTML = "I have choosen my number";
-var NextScreen = 1;
+var NextScreen = .5;
 var MyGuess = 256;
-var Counter = 1;
+var Counter = 0;
 
 function Start(){
-
+NextNumber();
 document.getElementById("Display2").innerHTML = "";
 document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
 document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
@@ -92,33 +92,28 @@ var x = document.createElement("BUTTON");
   document.body.appendChild(x); 
 //https://stackoverflow.com/questions/5303899/change-onclick-action-with-a-javascript-function
 document.getElementById("Button1").onclick = Yes;
-document.getElementById("Button2").onclick = No;
+document.getElementById("Button2").onclick = NextNumber;
 }
 
 function Yes(){
+MyGuess += NextScreen;
 NextNumber();
-Counter += 1;
-document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
-document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
-if (Counter == 9){End(); }
-}
-
-function No(){
-NextNumber();
-MyGuess -= NextScreen;
 }
 
 function NextNumber(){
+Counter += 1;
+if (Counter == 9){End(); }
 
-if (NextScreen == 1) {DisplayNumbers(n1); }
-if (NextScreen == 2) {DisplayNumbers(n2); }
-if (NextScreen == 4) {DisplayNumbers(n4); }
-if (NextScreen == 8) {DisplayNumbers(n8); }
-if (NextScreen == 16) {DisplayNumbers(n16); }
-if (NextScreen == 32)  {DisplayNumbers(n32); }
-if (NextScreen == 64)  {DisplayNumbers(n64); }
-if (NextScreen == 128) {DisplayNumbers(n128); }
-MyGuess += NextScreen;
+document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
+document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
+if (NextScreen == .5) {DisplayNumbers(n1); }
+if (NextScreen == 1) {DisplayNumbers(n2); }
+if (NextScreen == 2) {DisplayNumbers(n4); }
+if (NextScreen == 4) {DisplayNumbers(n8); }
+if (NextScreen == 8) {DisplayNumbers(n16); }
+if (NextScreen == 16)  {DisplayNumbers(n32); }
+if (NextScreen == 32)  {DisplayNumbers(n64); }
+if (NextScreen == 64) {DisplayNumbers(n128); }
 NextScreen *= 2;
 }
 
