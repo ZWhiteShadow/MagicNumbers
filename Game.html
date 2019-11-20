@@ -69,17 +69,46 @@ for (var i = 0; i < RandomNumber.length; i++) {
         nAll[nAll.length] = Random;
    } // End Random # Generator loop
 
-var MakeNewButton = true;
-var NextScreen = .5;
-var MyGuess = 255.5;
+
 DisplayNumbers(nAll);
-var Counter = 0;
+document.getElementById('Button1').innerHTML = "I have choosen my number";
+var NextScreen = 1;
+var MyGuess = 256;
+var Counter = 1;
 
 function Start(){
-Counter += 1;
+
 document.getElementById("Display2").innerHTML = "";
 document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
-document.getElementById('Button1').innerHTML = "YES I see my number";
+document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
+document.getElementById('Button1').innerHTML = "Yes I see my number";
+
+// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_pushbutton_create
+
+var x = document.createElement("BUTTON");
+  var t = document.createTextNode("NO it is NOT there");
+  x.appendChild(t);
+  x.id ='Button2';
+  document.body.appendChild(x); 
+//https://stackoverflow.com/questions/5303899/change-onclick-action-with-a-javascript-function
+document.getElementById("Button1").onclick = Yes;
+document.getElementById("Button2").onclick = No;
+}
+
+function Yes(){
+NextNumber();
+Counter += 1;
+document.getElementById("Display3").innerHTML = "Is your number on the screen? " + Counter + "/8";
+document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
+if (Counter == 9){End(); }
+}
+
+function No(){
+NextNumber();
+MyGuess -= NextScreen;
+}
+
+function NextNumber(){
 
 if (NextScreen == 1) {DisplayNumbers(n1); }
 if (NextScreen == 2) {DisplayNumbers(n2); }
@@ -89,32 +118,8 @@ if (NextScreen == 16) {DisplayNumbers(n16); }
 if (NextScreen == 32)  {DisplayNumbers(n32); }
 if (NextScreen == 64)  {DisplayNumbers(n64); }
 if (NextScreen == 128) {DisplayNumbers(n128); }
-
 MyGuess += NextScreen;
-document.getElementById('MyGuess').innerHTML = "My Guess Is: " + MyGuess; 
 NextScreen *= 2;
-
-if (MakeNewButton == true){
-
-// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_pushbutton_create
-
-var x = document.createElement("BUTTON");
-  var t = document.createTextNode("NO it is NOT there");
-  x.appendChild(t);
-  x.id ='Button2';
-  document.body.appendChild(x); 
-//https://stackoverflow.com/questions/42824309/how-to-change-onclick-using-javascript/42824347
-document.getElementById('Button2').setAttribute( "onClick", "No()");
-  
-  MakeNewButton = false;
-  }
-
-if (Counter == 9){End(); }
-}
-
-function No(){
-MyGuess -= NextScreen;
-Start();
 }
 
 function End(){
