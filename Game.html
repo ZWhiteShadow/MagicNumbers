@@ -1,5 +1,4 @@
 <!DOCTYPE html> 
-
   
 <html> 
     <head> 
@@ -10,7 +9,8 @@
 	#wrapper {
   display: flex;
   justify-content: center;
-           }
+           }		
+
 </style>
 
 <!---Make full screen code from: -->
@@ -25,7 +25,6 @@ user-scalable=no">
   </head>
 
 <body>
-
 <h2>MAGIC NUMBERS</h2>
 <h3><p id= "Display2">Choose any of these numbers:</p></h3>
 <h3><p id= "Display3">And I will guess it!</p></h3>
@@ -128,10 +127,36 @@ function DisplayNumbers(x){
 document.getElementById("Display1").innerHTML = "";
 
 for (var i = 1; i < (x.length); i++ ) {
-     document.getElementById("Display1").innerHTML +=  x[i] + "\xa0\xa0\xa0\xa0\xa0\xa0  ";
+     color(x, i);
      if (i % 6 == 0) {document.getElementById("Display1").innerHTML += "<br><br>  ";}
+} 
+color(x, 0);
 }
-document.getElementById("Display1").innerHTML +=  x[0] + "  ";
+
+function color(x, i){
+    // https://www.quora.com/How-can-I-change-the-color-of-inner-HTML-var-value-text-with-JavaScript
+// http://w3schools.org.in/html/html_colorvalues.html
+    if (x[i] < 300) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#FF0000\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 else if (x[i] >= 300 && x[i] < 325) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#FFBF00\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 else if (x[i] >= 325 && x[i] < 350) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#D7DF01\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 	 else if (x[i] >= 350 && x[i] < 375) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#80FF00\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 	 else if (x[i] >= 375 && x[i] <= 400) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#01DFD7\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 else if (x[i] >= 400 && x[i] < 425) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#0080FF\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 else if (x[i] >= 425 && x[i] < 450) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#7401DF\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 	 else if (x[i] >= 450 && x[i] < 475) {document.getElementById("Display1").innerHTML
+   += "<span style=\"color:#A901DB\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"}
+	 	 else if (x[i] >= 475 && x[i] < 500) {document.getElementById("Display1").innerHTML  
+           += "<span style=\"color:#FF00BF\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"} 
+		 else if (x[i] >= 500 && x[i] <= 525) {document.getElementById("Display1").innerHTML
+         += "<span style=\"color:#848484\">" + x[i] + "</span>" + "\xa0\xa0\xa0\xa0\xa0\xa0"} 
+         else {};
 }
 
 </script>
