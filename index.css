@@ -1,0 +1,12 @@
+td {
+padding: 15px;
+border: 1px solid white;
+}
+table {
+    padding-bottom: 15px;
+}
+body {
+    background-color:black;
+    color:white;
+    width: 45%;
+}
