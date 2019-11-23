@@ -1,3 +1,4 @@
+
 // https://www.w3schools.com/js/js_arrays.asp 
 var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
 var n1 = [], n2 = [], n4 = [], n8 = [],
@@ -87,9 +88,17 @@ for (var i = 0; i < (x.length); i++ ) {
     }
   var cell1 = row.insertCell(i - (newRow * 6));
       // https://www.quora.com/How-can-I-change-the-color-of-inner-HTML-var-value-text-with-JavaScript
-// https://htmlcolorcodes.com/
+// http://w3schools-fa.ir/colors/colors_wheels.html
 
-cell1.innerHTML = "<span style=\"color:#FF0000\">" + x[i] + "</span>"
-
+if ( x[i] <= 284) {cell1.innerHTML = "<span style=\"color:#FF0000\">" + x[i] + "</span>"} //red
+if ( x[i] > 284) {cell1.innerHTML = "<span style=\"color:#FF8000\">" + x[i] + "</span>"} //orange
+if ( x[i] > 313) {cell1.innerHTML = "<span style=\"color:#FFFF00\">" + x[i] + "</span>"} //yellow
+if ( x[i] > 341) {cell1.innerHTML = "<span style=\"color:#00FF00\">" + x[i] + "</span>"} //green
+if ( x[i] > 370) {cell1.innerHTML = "<span style=\"color:#00FFFF\">" + x[i] + "</span>"} // cyan
+if ( x[i] > 398) {cell1.innerHTML = "<span style=\"color:#0800FF\">" + x[i] + "</span>"} //light blue
+if ( x[i] > 427) {cell1.innerHTML = "<span style=\"color:#0000FF\">" + x[i] + "</span>"} //blue
+if ( x[i] > 455) {cell1.innerHTML = "<span style=\"color:#8000FF\">" + x[i] + "</span>"} //purple
+if ( x[i] > 483) {cell1.innerHTML = "<span style=\"color:#FF00FF\">" + x[i] + "</span>"} //magenta
+if ( x[i] > 512) {cell1.innerHTML = "<span style=\"color:#FF0080\">" + x[i] + "</span>"} //pink
   } 
 }
