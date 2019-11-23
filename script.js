@@ -97,7 +97,7 @@ if ( x[i] > 313) {cell1.innerHTML = "<span style=\"color:#FFFF00\">" + x[i] + "<
 if ( x[i] > 341) {cell1.innerHTML = "<span style=\"color:#00FF00\">" + x[i] + "</span>"} //green
 if ( x[i] > 370) {cell1.innerHTML = "<span style=\"color:#00FFFF\">" + x[i] + "</span>"} // cyan
 if ( x[i] > 398) {cell1.innerHTML = "<span style=\"color:#ADD8E6\">" + x[i] + "</span>"} //light blue
-if ( x[i] > 427) {cell1.innerHTML = "<span style=\"color:#FFFFFF\">" + x[i] + "</span>"} //white
+if ( x[i] > 427) {cell1.innerHTML = "<span style=\"color:white\">" + x[i] + "</span>"} //white
 if ( x[i] > 455) {cell1.innerHTML = "<span style=\"color:#9932CC\">" + x[i] + "</span>"} //purple
 if ( x[i] > 483) {cell1.innerHTML = "<span style=\"color:#FF00FF\">" + x[i] + "</span>"} //magenta
 if ( x[i] > 512) {cell1.innerHTML = "<span style=\"color:#FF0080\">" + x[i] + "</span>"} //pink
