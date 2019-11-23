@@ -1,4 +1,3 @@
-
 // https://www.w3schools.com/js/js_arrays.asp 
 var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
 var n1 = [], n2 = [], n4 = [], n8 = [],
@@ -91,15 +90,18 @@ for (var i = 0; i < (x.length); i++ ) {
       // https://www.quora.com/How-can-I-change-the-color-of-inner-HTML-var-value-text-with-JavaScript
 // http://w3schools-fa.ir/colors/colors_wheels.html
 
-if ( x[i] <= 284) {cell1.innerHTML = "<span style=\"color:#FF0000\">" + x[i] + "</span>"} //red
-if ( x[i] > 284) {cell1.innerHTML = "<span style=\"color:#FF8000\">" + x[i] + "</span>"} //orange
-if ( x[i] > 313) {cell1.innerHTML = "<span style=\"color:#FFFF00\">" + x[i] + "</span>"} //yellow
-if ( x[i] > 341) {cell1.innerHTML = "<span style=\"color:#00FF00\">" + x[i] + "</span>"} //green
-if ( x[i] > 370) {cell1.innerHTML = "<span style=\"color:#00FFFF\">" + x[i] + "</span>"} // cyan
-if ( x[i] > 398) {cell1.innerHTML = "<span style=\"color:#ADD8E6\">" + x[i] + "</span>"} //light blue
-if ( x[i] > 427) {cell1.innerHTML = "<span style=\"color:white\">" + x[i] + "</span>"} //white
-if ( x[i] > 455) {cell1.innerHTML = "<span style=\"color:#9932CC\">" + x[i] + "</span>"} //purple
-if ( x[i] > 483) {cell1.innerHTML = "<span style=\"color:#FF00FF\">" + x[i] + "</span>"} //magenta
-if ( x[i] > 512) {cell1.innerHTML = "<span style=\"color:#FF0080\">" + x[i] + "</span>"} //pink
+if (x[i] % 2 == 0) {spanString = "<span id=\"span1\" style=\"color:"}
+else {spanString = "<span id=\"span2\" style=\"color:"}
+
+if ( x[i] <= 284) {cell1.innerHTML = spanString + "#FF0000\">" + x[i] + "</span>"} //red
+if ( x[i] > 284) {cell1.innerHTML = spanString + "#FF8000\">" + x[i] + "</span>"} //orange
+if ( x[i] > 313) {cell1.innerHTML = spanString + "#FFFF00\">" + x[i] + "</span>"} //yellow
+if ( x[i] > 341) {cell1.innerHTML = spanString + "#00FF00\">" + x[i] + "</span>"} //green
+if ( x[i] > 370) {cell1.innerHTML = spanString + "#00FFFF\">" + x[i] + "</span>"} // cyan
+if ( x[i] > 398) {cell1.innerHTML = spanString + "#ADD8E6\">" + x[i] + "</span>"} //light blue
+if ( x[i] > 427) {cell1.innerHTML = spanString + "#FFFFFF\">" + x[i] + "</span>"} //white
+if ( x[i] > 455) {cell1.innerHTML = spanString + "#9932CC\">" + x[i] + "</span>"} //purple
+if ( x[i] > 483) {cell1.innerHTML = spanString + "#FF00FF\">" + x[i] + "</span>"} //magenta
+if ( x[i] > 512) {cell1.innerHTML = spanString + "#FF0080\">" + x[i] + "</span>"} //pink
   } 
 }
