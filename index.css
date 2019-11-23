@@ -14,7 +14,7 @@ html{
      white-space: nowrap;
 }
 
-button {
+#Button1 #Button2 {
   background-color: white;
   border: none;
   color: black;
