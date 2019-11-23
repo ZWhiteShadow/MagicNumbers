@@ -11,15 +11,16 @@ if (Random == 256){Random = 257};
 var RandomNumber = (Random).toString(2) // Converts to binary
 // https://stackoverflow.com/questions/9951500/javascriptstoring-values-in-array
 for (var i = 0; i < RandomNumber.length; i++) {
+	
         all[i] = RandomNumber.charAt(i)
-				if (i == 8 && all[8] == 1) {n1[n1.length] = Random};
-					if (i == 7 && all[7] == 1) {n2[n2.length] = Random};
-						if (i == 6 && all[6] == 1) {n4[n4.length] = Random};
-							if (i == 5 && all[5] == 1) {n8[n8.length] = Random};
-								if (i == 4 && all[4] == 1) {n16[n16.length] = Random};
-									if (i == 3 && all[3] == 1) {n32[n32.length] = Random};
-										if (i == 2 && all[2] == 1) {n64[n64.length] = Random};
-											if (i == 1 && all[1] == 1) {n128[n128.length] = Random};
+	if (i == 8 && all[8] == 1) {n1[n1.length] = Random};
+	if (i == 7 && all[7] == 1) {n2[n2.length] = Random};
+	if (i == 6 && all[6] == 1) {n4[n4.length] = Random};
+	if (i == 5 && all[5] == 1) {n8[n8.length] = Random};
+	if (i == 4 && all[4] == 1) {n16[n16.length] = Random};
+	if (i == 3 && all[3] == 1) {n32[n32.length] = Random};
+	if (i == 2 && all[2] == 1) {n64[n64.length] = Random};
+	if (i == 1 && all[1] == 1) {n128[n128.length] = Random};
 				}
         nAll[nAll.length] = Random;
    } // End Random # Generator loop
@@ -95,7 +96,7 @@ if ( x[i] > 284) {cell1.innerHTML = "<span style=\"color:#FF8000\">" + x[i] + "<
 if ( x[i] > 313) {cell1.innerHTML = "<span style=\"color:#FFFF00\">" + x[i] + "</span>"} //yellow
 if ( x[i] > 341) {cell1.innerHTML = "<span style=\"color:#00FF00\">" + x[i] + "</span>"} //green
 if ( x[i] > 370) {cell1.innerHTML = "<span style=\"color:#00FFFF\">" + x[i] + "</span>"} // cyan
-if ( x[i] > 398) {cell1.innerHTML = "<span style=\"color:#0800FF\">" + x[i] + "</span>"} //light blue
+if ( x[i] > 398) {cell1.innerHTML = "<span style=\"color:#ADD8E6\">" + x[i] + "</span>"} //light blue
 if ( x[i] > 427) {cell1.innerHTML = "<span style=\"color:#0000FF\">" + x[i] + "</span>"} //blue
 if ( x[i] > 455) {cell1.innerHTML = "<span style=\"color:#8000FF\">" + x[i] + "</span>"} //purple
 if ( x[i] > 483) {cell1.innerHTML = "<span style=\"color:#FF00FF\">" + x[i] + "</span>"} //magenta
