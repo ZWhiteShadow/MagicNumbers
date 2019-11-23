@@ -13,3 +13,7 @@ body {
 html{
      white-space: nowrap;
 }
+
+button{
+     padding: 15px;
+}
