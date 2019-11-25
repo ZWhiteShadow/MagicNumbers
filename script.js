@@ -64,12 +64,19 @@ NextScreen *= 2;
 }
 function End(){
 document.getElementById("Display1").innerHTML = "";
-document.getElementById("Display2").innerHTML = "<h2>" + "Your Number Is: " + MyGuess + "</h2>" ;
+document.getElementById("Display2").innerHTML = "<h2>" + "Your number is: " + MyGuess + "</h2>" ;
 document.getElementById("Display3").innerHTML = "";
-document.getElementById('Button1').style.visibility = 'hidden';
-document.getElementById('Button2').style.visibility = 'hidden';
+document.getElementById('Button1').innerHTML = "New Game!";
+document.getElementById('Button1').onclick = Reload;
+var element = document.getElementById('Button2');
+element.parentNode.removeChild(element);
 document.getElementById("Table").innerHTML = "";
 }
+
+function Reload(){
+document.location.reload(true);
+}
+
 //https://stackoverflow.com/questions/3481491/is-there-any-way-i-can-print-string-array-without-using-for-loop  
 function DisplayNumbers(x){
 document.getElementById("Display1").innerHTML = "";
