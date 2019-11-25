@@ -64,7 +64,7 @@ NextScreen *= 2;
 }
 function End(){
 document.getElementById("Display1").innerHTML = "";
-document.getElementById("Display2").innerHTML = "<h1>" + "Your Number Is: " + MyGuess + "</h1>" ;
+document.getElementById("Display2").innerHTML = "<h2>" + "Your Number Is: " + MyGuess + "</h2>" ;
 document.getElementById("Display3").innerHTML = "";
 document.getElementById('Button1').style.visibility = 'hidden';
 document.getElementById('Button2').style.visibility = 'hidden';
