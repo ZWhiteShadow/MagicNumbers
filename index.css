@@ -14,9 +14,6 @@ td {
         color:white;
         text-align:center;
     }
-    button{
-        margin-bottom: 15px;
-    }
     html{
          white-space: nowrap;
                 position:fixed;
@@ -41,6 +38,7 @@ td {
         font-family: 'Noto Sans TC', sans-serif;
     }
     button{
+        margin-bottom: 15px;
         font-size: 20px;
         background-color: black;
         border-color: white;
