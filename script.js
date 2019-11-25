@@ -2,7 +2,7 @@
 var all = [0, 0, 0, 0, 0, 0, 0, 0, 0]; 
 var n1 = [], n2 = [], n4 = [], n8 = [],
    n16 = [], n32 =[], n64 =[], n128 =[], nAll = [], AllAry = [];
-for (var a = 1; a <= 54; a++) {
+for (var a = 1; a <= 35; a++) {
 // http://www.javascriptkit.com/javatutors/randomnum.shtml
 // https://stackoverflow.com/questions/9939760/how-do-i-convert-an-integer-to-binary-in-javascript
 var Random = Math.floor(Math.random()*256) + 256; // Random number 
@@ -81,7 +81,7 @@ var row = table.insertRow(rowCount);
 var newRow = 0;
 // https://stackoverflow.com/questions/15866451/how-to-insert-row-at-end-of-table-with-htmltableelement-insertrow
 for (var i = 0; i < (x.length); i++ ) {
-  if (i % 6 == 0 && i != 0 ){
+  if (i % 5 == 0 && i != 0 ){
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
     newRow += 1;
