@@ -67,13 +67,13 @@ document.getElementById("Display1").innerHTML = "";
 document.getElementById("Display2").innerHTML = "<h2>" + "Your number is: " + MyGuess + "</h2>" ;
 document.getElementById("Display3").innerHTML = "";
 document.getElementById('Button1').innerHTML = "New Game!";
-document.getElementById('Button1').onclick = Reload;
+document.getElementById('Button1').onclick = newgame;
 var element = document.getElementById('Button2');
 element.parentNode.removeChild(element);
 document.getElementById("Table").innerHTML = "";
 }
 
-function Reload(){
+function newgame(){
 document.location.reload(true);
 }
 
