@@ -32,7 +32,7 @@ var Counter = 0;
 function Start(){
 NextNumber();
 document.getElementById("Display2").innerHTML = "";
-document.getElementById("Display3").innerHTML = "Is your number on the screen? <br> You are on screen " + Counter + " of 8";
+document.getElementById("Display3").innerHTML = "Is your number <br>on the screen? <br> You are on screen " + Counter + " of 8";
 document.getElementById('Button1').innerHTML = "Yes I see my number";
 // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_pushbutton_create
 var x = document.createElement("BUTTON");
