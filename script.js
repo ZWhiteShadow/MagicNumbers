@@ -50,7 +50,7 @@ NextNumber();
 }
 function NextNumber(){
 Counter += 1;
-document.getElementById("Display3").innerHTML = "Is your number on the screen? <br> You are on screen " + Counter + " of 8";
+document.getElementById("Display3").innerHTML = "Is your number<br> on the screen? <br> You are on screen " + Counter + " of 8";
 if (Counter == 9){End(); }
 if (NextScreen == .5) {DisplayNumbers(n1); }
 if (NextScreen == 1) {DisplayNumbers(n2); }
